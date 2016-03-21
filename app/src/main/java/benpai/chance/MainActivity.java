@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -94,5 +95,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //TODO: remove history states individually when longpressed
-    //TODO: toast user when single clicking history states
+
+    public void notifyLongClick(View view) {
+        Toast.makeText(this, R.string.long_press_to_remove, Toast.LENGTH_SHORT).show();
+    }
 }

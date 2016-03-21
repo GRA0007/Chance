@@ -11,4 +11,5 @@
     android:clickable="true"
     android:background="?attr/selectableItemBackground"
     android:id="@+id/coinHistoryState"
-    android:longClickable="true" />
+    android:longClickable="true"
+    android:onClick="notifyLongClick"/>

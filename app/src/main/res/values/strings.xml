@@ -5,4 +5,6 @@
     <string name="tails">Tails</string>
     <string name="clear_history">Clear History</string>
     <string name="history_empty">History is empty</string>
+    <string name="title_activity_dice">Dice</string>
+    <string name="long_press_to_remove">Long press to remove</string>
 </resources>
