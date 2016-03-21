@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = LayoutInflater.from(this);
 
         // Inflate layout
-        TextView txt = (TextView) inflater.inflate(R.layout.coin_history, null);
+        TextView txt = (TextView) inflater.inflate(R.layout.coin_history, history, false);
         // Modify inflated layout
         if (heads) {
             txt.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.coin_head, 0, 0);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             txt.setText(R.string.tails);
         }
         // Add the modified layout to the row
-        history.addView(txt);
+        history.addView(txt, 0);
     }
 
     public void coinClick(View view) {
@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         Boolean coinState = random.nextBoolean();
         TextView coinName = (TextView) findViewById(R.id.coinState);
         ImageView currentCoinImage = (ImageView) findViewById(R.id.currentCoin);
+        TextView empty = (TextView) findViewById(R.id.history_empty);
+        empty.setVisibility(view.GONE);
 
         if (coinState) {
             coinName.setText(R.string.heads);
@@ -82,5 +84,12 @@ public class MainActivity extends AppCompatActivity {
             currentCoinImage.setImageResource(R.drawable.coin_tail_large);
             addToHistory(false);
         }
+    }
+
+    public void clearHistory(View view) {
+        LinearLayout history = (LinearLayout) findViewById(R.id.history);
+        TextView empty = (TextView) findViewById(R.id.history_empty);
+        history.removeAllViews();
+        empty.setVisibility(view.VISIBLE);
     }
 }

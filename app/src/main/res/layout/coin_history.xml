@@ -2,12 +2,13 @@
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:text="@string/tails"
+    android:text="@string/heads"
     android:textAlignment="center"
     android:textSize="18sp"
-    android:layout_width="@dimen/coin_history_width"
-    android:drawableTop="@drawable/coin_tail"
+    android:layout_width="70dp"
+    android:drawableTop="@drawable/coin_head"
     android:paddingTop="7dp"
     android:clickable="true"
     android:background="?attr/selectableItemBackground"
-    android:id="@+id/coinHistoryState"/>
+    android:id="@+id/coinHistoryState"
+    android:longClickable="true" />

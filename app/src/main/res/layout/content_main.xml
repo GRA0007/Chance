@@ -44,12 +44,17 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:clipToPadding="false">
+
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:id="@+id/horizontalScrollView"
             android:layout_gravity="center_horizontal"
-            android:elevation="2dp"
             android:background="#FEFEFE">
 
             <LinearLayout
@@ -57,80 +62,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/history">
-
-                <TextView
-                    android:layout_height="match_parent"
-                    android:text="@string/tails"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:layout_width="@dimen/coin_history_width"
-                    android:drawableTop="@drawable/coin_tail"
-                    android:paddingTop="7dp"
-                    android:clickable="true"
-                    android:background="?attr/selectableItemBackground"/>
-                <TextView
-                    android:layout_height="match_parent"
-                    android:text="@string/heads"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:layout_width="@dimen/coin_history_width"
-                    android:drawableTop="@drawable/coin_head"
-                    android:paddingTop="7dp"
-                    android:clickable="true"
-                    android:background="?attr/selectableItemBackground"/>
-                <TextView
-                    android:layout_height="match_parent"
-                    android:text="@string/tails"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:layout_width="@dimen/coin_history_width"
-                    android:drawableTop="@drawable/coin_tail"
-                    android:paddingTop="7dp"
-                    android:clickable="true"
-                    android:background="?attr/selectableItemBackground"/>
-                <TextView
-                    android:layout_height="match_parent"
-                    android:text="@string/heads"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:layout_width="@dimen/coin_history_width"
-                    android:drawableTop="@drawable/coin_head"
-                    android:paddingTop="7dp"
-                    android:clickable="true"
-                    android:background="?attr/selectableItemBackground"/>
-                <TextView
-                    android:layout_height="match_parent"
-                    android:text="@string/heads"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:layout_width="@dimen/coin_history_width"
-                    android:drawableTop="@drawable/coin_head"
-                    android:paddingTop="7dp"
-                    android:clickable="true"
-                    android:background="?attr/selectableItemBackground"/>
-                <TextView
-                    android:layout_height="match_parent"
-                    android:text="@string/tails"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:layout_width="@dimen/coin_history_width"
-                    android:drawableTop="@drawable/coin_tail"
-                    android:paddingTop="7dp"
-                    android:clickable="true"
-                    android:background="?attr/selectableItemBackground"/>
-                <TextView
-                    android:layout_height="match_parent"
-                    android:text="@string/heads"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:layout_width="@dimen/coin_history_width"
-                    android:drawableTop="@drawable/coin_head"
-                    android:paddingTop="7dp"
-                    android:clickable="true"
-                    android:background="?attr/selectableItemBackground"/>
-
             </LinearLayout>
         </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_empty"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:id="@+id/history_empty"/>
+    </FrameLayout>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -139,5 +81,6 @@
         android:text="@string/clear_history"
         android:id="@+id/button"
         android:layout_gravity="center"
-        android:layout_marginTop="7dp"/>
+        android:layout_marginTop="7dp"
+        android:onClick="clearHistory"/>
 </LinearLayout>
