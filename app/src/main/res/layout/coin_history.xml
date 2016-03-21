@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:text="@string/tails"
+    android:textAlignment="center"
+    android:textSize="18sp"
+    android:layout_width="@dimen/coin_history_width"
+    android:drawableTop="@drawable/coin_tail"
+    android:paddingTop="7dp"
+    android:clickable="true"
+    android:background="?attr/selectableItemBackground"
+    android:id="@+id/coinHistoryState"/>

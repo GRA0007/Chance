@@ -1,13 +1,21 @@
 package benpai.chance;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,5 +47,40 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void addToHistory(Boolean heads) {
+        LinearLayout history = (LinearLayout) findViewById(R.id.history);
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        // Inflate layout
+        TextView txt = (TextView) inflater.inflate(R.layout.coin_history, null);
+        // Modify inflated layout
+        if (heads) {
+            txt.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.coin_head, 0, 0);
+            txt.setText(R.string.heads);
+        } else {
+            txt.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.coin_tail, 0, 0);
+            txt.setText(R.string.tails);
+        }
+        // Add the modified layout to the row
+        history.addView(txt);
+    }
+
+    public void coinClick(View view) {
+        Random random = new Random();
+        Boolean coinState = random.nextBoolean();
+        TextView coinName = (TextView) findViewById(R.id.coinState);
+        ImageView currentCoinImage = (ImageView) findViewById(R.id.currentCoin);
+
+        if (coinState) {
+            coinName.setText(R.string.heads);
+            currentCoinImage.setImageResource(R.drawable.coin_head_large);
+            addToHistory(true);
+        } else {
+            coinName.setText(R.string.tails);
+            currentCoinImage.setImageResource(R.drawable.coin_tail_large);
+            addToHistory(false);
+        }
     }
 }
