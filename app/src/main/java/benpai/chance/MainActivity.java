@@ -92,4 +92,7 @@ public class MainActivity extends AppCompatActivity {
         history.removeAllViews();
         empty.setVisibility(view.VISIBLE);
     }
+
+    //TODO: remove history states individually when longpressed
+    //TODO: toast user when single clicking history states
 }

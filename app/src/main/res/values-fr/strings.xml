@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chance</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="clear_history">Supprimer l\'historique</string>
+    <string name="heads">Face</string>
+    <string name="tails">Pile</string>
+    <string name="history_empty">L\'histoire est vide</string>
+</resources>
