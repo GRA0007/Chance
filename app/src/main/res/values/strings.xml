@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Chance</string>
     <string name="action_settings">Settings</string>
+    <string name="heads">Heads</string>
+    <string name="tails">Tails</string>
+    <string name="clear_history">Clear History</string>
 </resources>
