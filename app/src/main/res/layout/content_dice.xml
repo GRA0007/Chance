@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,6 +10,79 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="benpai.chance.Dice"
-    tools:showIn="@layout/activity_dice">
+    tools:showIn="@layout/activity_dice"
+    android:orientation="vertical"
+    android:clipToPadding="false">
 
-</RelativeLayout>
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center_horizontal"
+        android:onClick="diceClick">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:id="@+id/currentDice"
+            android:src="@drawable/dice_unknown_large"
+            android:contentDescription="@string/tap_dice"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_dice"
+        android:id="@+id/diceFace"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/horizontalScrollView"
+            android:layout_gravity="center_horizontal"
+            android:background="#FEFEFE">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/history">
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_empty"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:id="@+id/history_empty"/>
+    </FrameLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_history"
+        android:id="@+id/button"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:onClick="clearHistory"/>
+
+</LinearLayout>

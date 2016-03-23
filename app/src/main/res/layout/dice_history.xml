@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:text="@string/six"
+    android:textAlignment="center"
+    android:textSize="18sp"
+    android:layout_width="70dp"
+    android:drawableTop="@drawable/dice_6"
+    android:paddingTop="7dp"
+    android:clickable="true"
+    android:background="?attr/selectableItemBackground"
+    android:id="@+id/diceHistoryState"
+    android:longClickable="true"
+    android:onClick="notifyLongClick"/>

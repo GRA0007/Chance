@@ -6,4 +6,7 @@
     <string name="heads">Face</string>
     <string name="tails">Pile</string>
     <string name="history_empty">L\'histoire est vide</string>
+    <string name="long_press_to_remove">Appuyez longuement pour supprimer</string>
+    <string name="title_activity_coin_flipper">Pile ou Face</string>
+    <string name="title_activity_dice">Dice Rouleau</string>
 </resources>

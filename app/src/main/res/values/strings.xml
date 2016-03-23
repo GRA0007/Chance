@@ -5,6 +5,15 @@
     <string name="tails">Tails</string>
     <string name="clear_history">Clear History</string>
     <string name="history_empty">History is empty</string>
-    <string name="title_activity_dice">Dice</string>
+    <string name="title_activity_dice">Dice Roller</string>
     <string name="long_press_to_remove">Long press to remove</string>
+    <string name="title_activity_coin_flipper">Coin Flipper</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="six">Six</string>
+    <string name="tap_coin">Tap coin to flip</string>
+    <string name="tap_dice">Tap dice to roll</string>
 </resources>
