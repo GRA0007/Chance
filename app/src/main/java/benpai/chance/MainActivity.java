@@ -1,5 +1,6 @@
 package benpai.chance;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -98,5 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void notifyLongClick(View view) {
         Toast.makeText(this, R.string.long_press_to_remove, Toast.LENGTH_SHORT).show();
+    }
+
+    //Testing only
+    public void diceRoller(View view) {
+        Intent intent = new Intent(this, Dice.class);
+        startActivity(intent);
     }
 }
