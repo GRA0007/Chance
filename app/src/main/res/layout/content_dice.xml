@@ -28,7 +28,7 @@
             android:layout_width="220dp"
             android:layout_height="220dp"
             android:id="@+id/currentDice"
-            android:src="@drawable/dice_unknown_large"
+            android:src="@drawable/dice_touch"
             android:contentDescription="@string/tap_dice"/>
 
     </FrameLayout>
