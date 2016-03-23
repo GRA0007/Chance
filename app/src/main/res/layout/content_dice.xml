@@ -33,7 +33,7 @@
 
     </FrameLayout>
 
-    <TextView
+    <benpai.chance.AutoResizeTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tap_dice"
@@ -41,15 +41,17 @@
         android:layout_gravity="center_horizontal"
         android:textSize="40sp"
         android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="none"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"/>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
         android:clipToPadding="false"
-        android:clipChildren="false">
+        android:clipChildren="false"
+        android:elevation="2dp">
 
         <HorizontalScrollView
             android:layout_width="match_parent"

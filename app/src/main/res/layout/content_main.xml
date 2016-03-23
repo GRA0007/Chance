@@ -16,9 +16,7 @@
 
     <!--
     TODO: Contain ripple to coin shape
-    TODO: Add hint text telling user to click coin
-    TODO: Begin app with grey undefined coin
-    TODO: Fix history box shadow
+    TODO: Fix history box shadow!!
      -->
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -39,9 +37,12 @@
 
     </FrameLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <benpai.chance.AutoResizeTextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:maxLines="1"
             android:text="@string/tap_coin"
             android:id="@+id/coinState"
             android:layout_gravity="center_horizontal"
@@ -53,17 +54,16 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
         android:clipToPadding="false"
-        android:clipChildren="false">
+        android:clipChildren="false"
+        android:elevation="2dp">
 
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:id="@+id/horizontalScrollView"
             android:layout_gravity="center_horizontal"
-            android:background="#FEFEFE"
-            android:elevation="2dp">
+            android:background="#FEFEFE">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -79,8 +79,7 @@
             android:text="@string/history_empty"
             android:layout_gravity="center"
             android:textSize="20sp"
-            android:id="@+id/history_empty"
-            android:elevation="3dp" />
+            android:id="@+id/history_empty" />
     </FrameLayout>
 
     <Button

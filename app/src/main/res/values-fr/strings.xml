@@ -9,4 +9,12 @@
     <string name="long_press_to_remove">Appuyez longuement pour supprimer</string>
     <string name="title_activity_coin_flipper">Pile ou Face</string>
     <string name="title_activity_dice">Dice Rouleau</string>
+    <string name="five">Cinq</string>
+    <string name="four">Quatre</string>
+    <string name="one">Un</string>
+    <string name="six">Six</string>
+    <string name="tap_coin">Appuyez sur la pièce de monnaie pour returner</string>
+    <string name="three">Trois</string>
+    <string name="two">Deux</string>
+    <string name="tap_dice">Appuyez sur les dés à rouler</string>
 </resources>
