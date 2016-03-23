@@ -15,41 +15,33 @@
     android:clipToPadding="false">
 
     <!--
-    TODO: Contain ripple to coin shape
     TODO: Fix history box shadow!!
      -->
-    <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:foreground="?attr/selectableItemBackground"
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:id="@+id/currentCoin"
+        android:src="@drawable/coin_touch"
+        android:contentDescription="@string/tap_coin"
+        android:onClick="coinClick"
         android:clickable="true"
-        android:focusable="true"
         android:layout_gravity="center_horizontal"
-        android:onClick="coinClick">
+        android:background="?attr/selectableItemBackgroundBorderless"/>
 
-        <ImageView
-            android:layout_width="220dp"
-            android:layout_height="220dp"
-            android:id="@+id/currentCoin"
-            android:src="@drawable/coin_touch"
-            android:contentDescription="@string/tap_coin" />
-
-    </FrameLayout>
-
-        <benpai.chance.AutoResizeTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:gravity="center"
-            android:maxLines="1"
-            android:text="@string/tap_coin"
-            android:id="@+id/coinState"
-            android:layout_gravity="center_horizontal"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"/>
+    <benpai.chance.AutoResizeTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/tap_coin"
+        android:id="@+id/coinState"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
 
     <FrameLayout
         android:layout_width="match_parent"

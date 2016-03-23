@@ -14,24 +14,16 @@
     android:orientation="vertical"
     android:clipToPadding="false">
 
-    <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:foreground="?attr/selectableItemBackground"
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:id="@+id/currentDice"
+        android:src="@drawable/dice_touch"
+        android:onClick="diceClick"
         android:clickable="true"
-        android:focusable="true"
         android:layout_gravity="center_horizontal"
-        android:onClick="diceClick">
-
-        <ImageView
-            android:layout_width="220dp"
-            android:layout_height="220dp"
-            android:id="@+id/currentDice"
-            android:src="@drawable/dice_touch"
-            android:contentDescription="@string/tap_dice"/>
-
-    </FrameLayout>
+        android:contentDescription="@string/tap_dice"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
 
     <benpai.chance.AutoResizeTextView
         android:layout_width="wrap_content"
