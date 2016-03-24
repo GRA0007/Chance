@@ -1,5 +1,6 @@
 package benpai.chance;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -115,4 +116,9 @@ public class Dice extends AppCompatActivity {
         Toast.makeText(this, R.string.long_press_to_remove, Toast.LENGTH_SHORT).show();
     }
 
+    //Testing only
+    public void intGen(View view) {
+        Intent intent = new Intent(this, Integer.class);
+        startActivity(intent);
+    }
 }

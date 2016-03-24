@@ -16,4 +16,6 @@
     <string name="six">Six</string>
     <string name="tap_coin">Tap coin to flip</string>
     <string name="tap_dice">Tap dice to roll</string>
+    <string name="title_activity_integer">Number Generator</string>
+    <string name="tap_int">Tap to generate</string>
 </resources>

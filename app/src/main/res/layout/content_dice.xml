@@ -25,6 +25,9 @@
         android:contentDescription="@string/tap_dice"
         android:background="?attr/selectableItemBackgroundBorderless"/>
 
+    <!--
+    TODO: Prevent the autoresizing text box from making the text really small
+    -->
     <benpai.chance.AutoResizeTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,5 +81,15 @@
         android:layout_gravity="center"
         android:layout_marginTop="7dp"
         android:onClick="clearHistory"/>
+
+    <!--Testing only-->
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Int Generator"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:onClick="intGen"/>
 
 </LinearLayout>
